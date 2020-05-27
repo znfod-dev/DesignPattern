@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Greeting View Controller-->
+        <scene sceneID="cM2-DZ-lcg">
+            <objects>
+                <viewController storyboardIdentifier="GreetingViewController" id="BIM-eb-SEE" customClass="GreetingViewController" customModule="MVC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AQY-B8-VuY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQR-kH-3BY">
+                                <rect key="frame" x="188" y="437.5" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d06-lu-aQ1">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wxK-yg-5Qg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="BIM-eb-SEE" eventType="touchUpInside" id="dLK-xu-amW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="d06-lu-aQ1" firstAttribute="leading" secondItem="Ajs-Ga-oKG" secondAttribute="leading" id="48E-Cz-law"/>
+                            <constraint firstItem="d06-lu-aQ1" firstAttribute="trailing" secondItem="Ajs-Ga-oKG" secondAttribute="trailing" id="bSM-2l-Cq0"/>
+                            <constraint firstItem="Ajs-Ga-oKG" firstAttribute="bottom" secondItem="d06-lu-aQ1" secondAttribute="bottom" id="bUn-1t-BGj"/>
+                            <constraint firstItem="AQR-kH-3BY" firstAttribute="centerX" secondItem="AQY-B8-VuY" secondAttribute="centerX" id="kXv-2j-igJ"/>
+                            <constraint firstItem="AQR-kH-3BY" firstAttribute="centerY" secondItem="AQY-B8-VuY" secondAttribute="centerY" id="l6b-7K-ESe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ajs-Ga-oKG"/>
+                    </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="AQR-kH-3BY" id="hBh-BG-LPH"/>
+                        <outlet property="showGreetingButton" destination="d06-lu-aQ1" id="hnl-AB-Yg0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nFo-hm-clt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457.97101449275368" y="-261.16071428571428"/>
+        </scene>
+    </scenes>
+</document>
