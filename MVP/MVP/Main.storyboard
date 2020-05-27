@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Greeting View Controller-->
         <scene sceneID="RQ6-QT-rNT">
             <objects>
-                <viewController storyboardIdentifier="GreetingViewController" id="elm-V7-e5f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GreetingViewController" id="elm-V7-e5f" customClass="GreetingViewController" customModule="MVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJE-5d-2yL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,6 +27,9 @@
                                     <constraint firstAttribute="height" constant="44" id="Jbo-Pm-8gy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="elm-V7-e5f" eventType="touchUpInside" id="L8U-kV-f5n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -39,6 +42,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jtz-Nj-J5S"/>
                     </view>
+                    <connections>
+                        <outlet property="greetingLabel" destination="ite-g6-Fvs" id="u0F-Kp-DOx"/>
+                        <outlet property="showGreetingButton" destination="vBw-ps-t1l" id="yzm-qC-6As"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkJ-c5-3lh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
