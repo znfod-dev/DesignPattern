@@ -20,7 +20,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         self.window = UIWindow(windowScene: windowScene)
-        //self.window!.rootViewController = Controller()
+        let model = Person(firstName: "David", lastName: "Blaine")
+        let viewModel = GreetingViewModel(person: model)
+        let view = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GreetingViewController") as! GreetingViewController
+        view.viewModel = viewModel
+        
+        self.window?.rootViewController = view
         self.window!.makeKeyAndVisible()
     }
 
